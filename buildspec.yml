@@ -20,6 +20,8 @@ phases:
       - curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.0/bin/linux/amd64/kubectl
       # Download the kubectl checksum file
       - curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.0/bin/linux/amd64/kubectl.sha256
+      # Fix sha256 formatting
+      - echo "$(cat kubectl.sha256) *kubectl" > kubectl.sha256
       # Validate the kubectl binary against the checksum file
       - sha256sum -c kubectl.sha256
       # Install kubectl
