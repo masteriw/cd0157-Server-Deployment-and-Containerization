@@ -18,6 +18,10 @@ docs/_build/
 __pycache__
 .env_file
 
+#Adicionados por Vitor
+venv/
+.dockerignore
+
 # Coverage reports
 htmlcov/
 .coverage
